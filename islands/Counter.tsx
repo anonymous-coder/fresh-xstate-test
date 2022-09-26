@@ -9,6 +9,7 @@ interface CounterProps {
 
 export default function Counter(props: CounterProps) {
   const [state, send] = useMachine(counterMachine);
+  console.log('state', state);
   const [count, setCount] = useState(props.start);
   return (
     <div class="flex gap-2 w-full">
